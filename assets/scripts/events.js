@@ -13,7 +13,6 @@ const swapPlayer = function () {
   }
 }
 
-
 const add = function (event) {
   const click = event.target
   console.log(click)
@@ -25,7 +24,16 @@ const add = function (event) {
   swapPlayer()
 }
 
-
+let space = player
+// checks for valid space to click or not
+const checkSpace = function () {
+  if (space !== player) {
+    add()
+  } else {
+    space = player
+  }
+}
+checkSpace()
 
 // for (let i = 0; i <= 9; i++) {
 //   if (gameBoard.length === 0) {
