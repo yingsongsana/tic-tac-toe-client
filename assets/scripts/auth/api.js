@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('../../../curl-scripts/config')
+const config = require('../config')
 
 const signUp = function (formData) {
   return $.ajax({
