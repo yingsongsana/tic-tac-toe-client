@@ -1,5 +1,7 @@
 'use strict'
 
+const ui = require('./ui.js')
+
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 
 // keep track of player
@@ -15,31 +17,15 @@ const swapPlayer = function () {
 
 const add = function (event) {
   const click = event.target
-  console.log(click)
-  const clickId = $(click).prop('id')
-  console.log(clickId)
-  gameBoard[clickId] = player
-  console.log(gameBoard)
-  $(click).html(player)
-  swapPlayer()
-}
-
-let space = player
-// checks for valid space to click or not
-const checkSpace = function () {
-  if (space !== player) {
-    add()
+  if ($(click).text() === '') {
+    const clickId = $(click).prop('id')
+    gameBoard[clickId] = player
+    $(click).html(player)
+    swapPlayer()
   } else {
-    space = player
+    ui.invalidMoveMessage()
   }
 }
-checkSpace()
-
-// for (let i = 0; i <= 9; i++) {
-//   if (gameBoard.length === 0) {
-//     userXClick()
-//   }
-// }
 
 module.exports = {
   add
