@@ -1,1 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
+
+.game-board {
+  position: absolute;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.box {
+  align-items: center;
+  background-color: none;
+  border: 1px solid black;
+  height: 100px;
+}
