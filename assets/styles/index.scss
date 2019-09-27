@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
+
 .success {
   color: green;
 }
@@ -8,11 +9,15 @@
   color: red;
 }
 
+.game-board {
+  position: absolute;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
 .box {
   align-items: center;
   background-color: none;
   border: 1px solid black;
-  display: flex;
   height: 100px;
-  justify-content: center;
 }

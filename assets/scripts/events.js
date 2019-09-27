@@ -28,6 +28,16 @@ const findCurrentPlayer = function () {
   }
 }
 
+// const isBoardFilled = function () {
+//   for (let i = 0; i < gameBoard.length; i++) {
+//     if (gameBoard[i] === 'x' || gameBoard[i] === 'o') {
+//
+//     }
+//   }
+// }
+//
+// console.log(gameBoard.every(isArrayFilled))
+
 const add = function (event) {
   const click = event.target
   if ($(click).text() === '') {

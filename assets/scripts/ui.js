@@ -2,8 +2,6 @@
 
 const userMessage = function (newText) {
   $('#game-message').text(newText)
-  $('#game-massage').removeClass('alt_alert')
-  $('#game-massage').addClass('alert')
 }
 const alertMessage = function (newText) {
   $('#alert-message').text(newText)
