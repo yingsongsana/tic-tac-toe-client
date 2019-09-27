@@ -1,6 +1,9 @@
 'use strict'
 
 const ui = require('./ui.js')
+const gameEvents = require('./game/events.js')
+const store = require('./store.js')
+const gameUi = require('./game/ui.js')
 
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 
@@ -44,6 +47,8 @@ const add = function (event) {
     const clickId = $(click).prop('id')
     gameBoard[clickId] = play
     $(click).html(play)
+    // update!
+    gameEvents.onUpdateGame(clickId, play)
     swapPlay()
   } else {
     ui.invalidMoveMessage()
@@ -51,6 +56,14 @@ const add = function (event) {
   findCurrentPlayer()
 }
 
+const playNewGame = function () {
+  if (!store.game) {
+    gameUi.onCreateNewGameFailure()
+  } else {
+    add()
+  }
+}
+
 module.exports = {
-  add
+  playNewGame
 }
