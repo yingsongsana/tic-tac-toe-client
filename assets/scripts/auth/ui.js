@@ -1,5 +1,6 @@
 'use strict'
 
+const store = require('../store.js')
 
 const successMessage = function (newText) {
   $('#message').text(newText)
@@ -20,7 +21,29 @@ const onSignUpFailure = function () {
   failureMessage('Signed up failed')
 }
 
+const onSignInSuccess = function (data) {
+  successMessage('Signed in successfully!')
+  store.user = data.user
+}
+
+const onSignInFailure = function () {
+  failureMessage('Signed in failed')
+}
+
+const onChangePasswordSuccess = function (data) {
+  successMessage('Changed password successfully!')
+}
+
+const onChangePasswordFailure = function () {
+  failureMessage('Changed password failed')
+}
+
+
 module.exports = {
   onSignUpSuccess,
-  onSignUpFailure
+  onSignUpFailure,
+  onSignInSuccess,
+  onSignInFailure,
+  onChangePasswordSuccess,
+  onChangePasswordFailure
 }

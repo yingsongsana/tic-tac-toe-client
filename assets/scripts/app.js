@@ -11,6 +11,7 @@ const scriptEvents = require('./events')
 
 $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
-  // when clicked, adds 'x' or 'o'
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#change-password').on('submit', authEvents.onChangePassword)
   $('.game-board').on('click', scriptEvents.add)
 })
