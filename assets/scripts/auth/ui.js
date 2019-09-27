@@ -24,6 +24,7 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (data) {
   successMessage('Signed in successfully!')
   store.user = data.user
+  // console.log(store.user)
 }
 
 const onSignInFailure = function () {
@@ -38,6 +39,16 @@ const onChangePasswordFailure = function () {
   failureMessage('Changed password failed')
 }
 
+const onSignOutSuccess = function () {
+  successMessage('Signed out successfully!')
+  store.user = ''
+  // console.log(store.user)
+}
+
+const onSignOutFailure = function () {
+  failureMessage('Sign out failed!')
+}
+
 
 module.exports = {
   onSignUpSuccess,
@@ -45,5 +56,7 @@ module.exports = {
   onSignInSuccess,
   onSignInFailure,
   onChangePasswordSuccess,
-  onChangePasswordFailure
+  onChangePasswordFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
