@@ -13,23 +13,25 @@ let play = 'x'
 const swapPlay = function () {
   if (play === 'x') {
     play = 'o'
-  } else {
-    play = 'x'
-  }
-}
-
-const playerX = 'x'
-const playerO = 'o'
-let currentPlayer = playerX
-const findCurrentPlayer = function () {
-  if (currentPlayer === playerX) {
-    currentPlayer = playerO
     ui.currentPlayerOMessage()
   } else {
-    currentPlayer = playerX
+    play = 'x'
     ui.currentPlayerXMessage()
   }
 }
+
+// const playerX = 'x'
+// const playerO = 'o'
+// let currentPlayer = playerX
+// const findCurrentPlayer = function () {
+//   if (currentPlayer === playerX) {
+//     currentPlayer = playerO
+//     ui.currentPlayerOMessage()
+//   } else {
+//     currentPlayer = playerX
+//     ui.currentPlayerXMessage()
+//   }
+// }
 
 // const isBoardFilled = function () {
 //   for (let i = 0; i < gameBoard.length; i++) {
@@ -53,14 +55,14 @@ const add = function (event) {
   } else {
     ui.invalidMoveMessage()
   }
-  findCurrentPlayer()
+  // findCurrentPlayer()
 }
 
 const playNewGame = function () {
   if (!store.game) {
     gameUi.onCreateNewGameFailure()
   } else {
-    add()
+    add(event)
   }
 }
 
