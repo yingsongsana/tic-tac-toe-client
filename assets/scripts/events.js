@@ -8,40 +8,63 @@ const gameUi = require('./game/ui.js')
 const gameBoard = ['', '', '', '', '', '', '', '', '']
 
 // keep track of player
-let play = 'x'
+let play = 'X'
 // swap player
 const swapPlay = function () {
-  if (play === 'x') {
-    play = 'o'
+  if (play === 'X') {
+    play = 'O'
     ui.currentPlayerOMessage()
   } else {
-    play = 'x'
+    play = 'X'
     ui.currentPlayerXMessage()
   }
 }
 
-// const playerX = 'x'
-// const playerO = 'o'
-// let currentPlayer = playerX
-// const findCurrentPlayer = function () {
-//   if (currentPlayer === playerX) {
-//     currentPlayer = playerO
-//     ui.currentPlayerOMessage()
-//   } else {
-//     currentPlayer = playerX
-//     ui.currentPlayerXMessage()
-//   }
-// }
+const checkForWinX = function () {
+  if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
+    console.log('Player X wins!')
+    // need to stop game if there's a winning condition
+  } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
+    console.log('Player X wins!')
+  } else if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') {
+    console.log('Player X wins!')
+  } else if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') {
+    console.log('Player X wins!')
+  } else if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') {
+    console.log('Player X wins!')
+  } else if (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') {
+    console.log('Player X wins!')
+  } else if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') {
+    console.log('Player X wins!')
+  } else if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') {
+    console.log('player X wins!')
+  } else {
+    console.log('Keep checking for win')
+  }
+}
 
-// const isBoardFilled = function () {
-//   for (let i = 0; i < gameBoard.length; i++) {
-//     if (gameBoard[i] === 'x' || gameBoard[i] === 'o') {
-//
-//     }
-//   }
-// }
-//
-// console.log(gameBoard.every(isArrayFilled))
+const checkForWinO = function () {
+  if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
+    console.log('Player O wins!')
+    // need to stop game if there's a winning condition
+  } else if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') {
+    console.log('Player O wins!')
+  } else if (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O') {
+    console.log('Player O wins!')
+  } else if (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') {
+    console.log('Player O wins!')
+  } else if (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') {
+    console.log('Player O wins!')
+  } else if (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O') {
+    console.log('Player O wins!')
+  } else if (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') {
+    console.log('Player O wins!')
+  } else if (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') {
+    console.log('player O wins!')
+  } else {
+    console.log('Keep checking for win')
+  }
+}
 
 const add = function (event) {
   const click = event.target
@@ -52,10 +75,11 @@ const add = function (event) {
     // update!
     gameEvents.onUpdateGame(clickId, play)
     swapPlay()
+    checkForWinX()
+    checkForWinO()
   } else {
     ui.invalidMoveMessage()
   }
-  // findCurrentPlayer()
 }
 
 const playNewGame = function () {
