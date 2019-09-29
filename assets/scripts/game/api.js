@@ -13,7 +13,7 @@ const create = function (data) {
   })
 }
 
-const update = function (index, move) {
+const update = function (index, move, over) {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.game.id,
     method: 'PATCH',
@@ -26,7 +26,7 @@ const update = function (index, move) {
           index: index,
           value: move
         },
-        over: false
+        over: over
       }
     }
   })

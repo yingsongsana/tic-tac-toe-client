@@ -12,8 +12,8 @@ const onCreateNewGame = function (data) {
     .then(ui.onCreateNewGameSuccess)
 }
 
-const onUpdateGame = function (index, move) {
-  api.update(index, move)
+const onUpdateGame = function (index, move, over) {
+  api.update(index, move, over)
     .then(ui.onUpdateGameSuccess)
 }
 

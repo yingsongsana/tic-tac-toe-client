@@ -15,8 +15,6 @@ const onCreateNewGameSuccess = function (data) {
 
 const onUpdateGameSuccess = function (data) {
   console.log(data)
-  // $('.cell-index').attr('cell-index', data.game.index)
-  // console.log(data.game.index)
 }
 
 const onCreateNewGameFailure = function () {

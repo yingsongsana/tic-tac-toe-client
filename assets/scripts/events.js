@@ -23,7 +23,9 @@ const swapPlay = function () {
 const checkForWinX = function () {
   if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
     console.log('Player X wins!')
+    store.game.over = true
     // need to stop game if there's a winning condition
+    // somehow updating store.game.over to true or false
   } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
     console.log('Player X wins!')
   } else if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') {
@@ -46,6 +48,7 @@ const checkForWinX = function () {
 const checkForWinO = function () {
   if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
     console.log('Player O wins!')
+
     // need to stop game if there's a winning condition
   } else if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') {
     console.log('Player O wins!')
@@ -82,11 +85,17 @@ const add = function (event) {
   }
 }
 
+// const stopGame = function () {
+//   if ()
+// store.game.over = true
+// }
+
 const playNewGame = function () {
   if (!store.game) {
     gameUi.onCreateNewGameFailure()
   } else {
     add(event)
+    // stopGame()
   }
 }
 
