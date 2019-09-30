@@ -21,8 +21,18 @@ const onCreateNewGameFailure = function () {
   message('Create new game first!')
 }
 
+const onWinningX = function () {
+  message('Player X wins!')
+}
+
+const onWinningO = function () {
+  message('Player O wins!')
+}
+
 module.exports = {
   onCreateNewGameSuccess,
   onUpdateGameSuccess,
-  onCreateNewGameFailure
+  onCreateNewGameFailure,
+  onWinningX,
+  onWinningO
 }

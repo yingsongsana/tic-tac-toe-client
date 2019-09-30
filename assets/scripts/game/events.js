@@ -10,6 +10,7 @@ const onCreateNewGame = function (data) {
 
   api.create(data)
     .then(ui.onCreateNewGameSuccess)
+  $('.box').html('')
 }
 
 const onUpdateGame = function (index, move, over) {

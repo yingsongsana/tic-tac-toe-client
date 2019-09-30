@@ -20,50 +20,42 @@ const swapPlay = function () {
   }
 }
 
-const checkForWinX = function () {
+const checkForWin = function () {
   if (gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') {
-    console.log('Player X wins!')
-    store.game.over = true
+    gameUi.onWinningX()
     // need to stop game if there's a winning condition
-    // somehow updating store.game.over to true or false
+    // somehow updating store.game.over to true or false ?
+    // store.game.over = true
   } else if (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') {
-    console.log('Player X wins!')
+    gameUi.onWinningX()
   } else if (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') {
-    console.log('Player X wins!')
+    gameUi.onWinningX()
   } else if (gameBoard[0] === 'X' && gameBoard[3] === 'X' && gameBoard[6] === 'X') {
-    console.log('Player X wins!')
+    gameUi.onWinningX()
   } else if (gameBoard[1] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') {
-    console.log('Player X wins!')
+    gameUi.onWinningX()
   } else if (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') {
-    console.log('Player X wins!')
+    gameUi.onWinningX()
   } else if (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') {
-    console.log('Player X wins!')
+    gameUi.onWinningX()
   } else if (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') {
-    console.log('player X wins!')
-  } else {
-    console.log('Keep checking for win')
-  }
-}
-
-const checkForWinO = function () {
-  if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
-    console.log('Player O wins!')
-
-    // need to stop game if there's a winning condition
+    gameUi.onWinningX()
+  } else if (gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
+    gameUi.onWinningO()
   } else if (gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O') {
-    console.log('Player O wins!')
+    gameUi.onWinningO()
   } else if (gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O') {
-    console.log('Player O wins!')
+    gameUi.onWinningO()
   } else if (gameBoard[0] === 'O' && gameBoard[3] === 'O' && gameBoard[6] === 'O') {
-    console.log('Player O wins!')
+    gameUi.onWinningO()
   } else if (gameBoard[1] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') {
-    console.log('Player O wins!')
+    gameUi.onWinningO()
   } else if (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O') {
-    console.log('Player O wins!')
+    gameUi.onWinningO()
   } else if (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') {
-    console.log('Player O wins!')
+    gameUi.onWinningO()
   } else if (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') {
-    console.log('player O wins!')
+    gameUi.onWinningO()
   } else {
     console.log('Keep checking for win')
   }
@@ -74,12 +66,11 @@ const add = function (event) {
   if ($(click).text() === '') {
     const clickId = $(click).prop('id')
     gameBoard[clickId] = play
-    $(click).html(play)
-    // update!
+    $(click).text(play)
     gameEvents.onUpdateGame(clickId, play)
+    // update!
     swapPlay()
-    checkForWinX()
-    checkForWinO()
+    checkForWin()
   } else {
     ui.invalidMoveMessage()
   }
