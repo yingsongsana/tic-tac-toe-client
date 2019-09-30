@@ -8,12 +8,13 @@ const message = function (newText) {
 }
 
 const onCreateNewGameSuccess = function (data) {
-  $('#game-board')
   store.game = data.game
   console.log(data.game)
+  // message('New game has been create!')
 }
 
 const onUpdateGameSuccess = function (data) {
+  store.game = data.game
   console.log(data)
 }
 
