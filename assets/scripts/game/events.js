@@ -2,6 +2,7 @@
 
 const api = require('./api.js')
 const ui = require('./ui.js')
+const scriptEvents = require('../events')
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onCreateNewGame = function (data) {
@@ -11,6 +12,7 @@ const onCreateNewGame = function (data) {
   api.create(data)
     .then(ui.onCreateNewGameSuccess)
   $('.box').html('')
+  // $('.game-board').on('click', scriptEvents.playNewGame)
 }
 
 const onUpdateGame = function (index, move, over) {
