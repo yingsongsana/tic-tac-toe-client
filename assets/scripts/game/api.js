@@ -33,7 +33,27 @@ const update = function (index, move, over) {
   })
 }
 
+const index = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games/',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      game: {
+        cell: {
+          index: 0,
+          value: 'X'
+        },
+        over: false
+      }
+    }
+  })
+}
+
 module.exports = {
   create,
-  update
+  update,
+  index
 }

@@ -29,6 +29,12 @@ const onCreateNewGameFailure = function () {
   message('Create new game first!')
 }
 
+const onGetGamesSuccess = function (data) {
+  store.game = data.game
+  console.log(data)
+  // message('Games won ', store.game.)
+}
+
 const onWinningX = function () {
   message('Player X wins!')
 }
@@ -53,6 +59,7 @@ module.exports = {
   onCreateNewGameSuccess,
   onUpdateGameSuccess,
   onCreateNewGameFailure,
+  onGetGamesSuccess,
   onWinningX,
   onWinningO,
   invalidMoveMessage,

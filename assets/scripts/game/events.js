@@ -27,6 +27,11 @@ const onUpdateGame = function (index, move, over) {
   api.update(index, move, over)
     .then(ui.onUpdateGameSuccess)
 }
+// unable to translate this into
+// const onGetGames = function () {
+//   api.index()
+//     .then(ui.onGetGamesSuccess)
+// }
 
 // swap player
 const swapPlay = function () {
@@ -123,8 +128,17 @@ const playNewGame = function () {
   }
 }
 
+// const showStats = function (data) {
+//   store.data = data.game
+//   const stats = data.game
+//   onGetGames()
+//   How can I find just the number of games played?
+//   $('.show-index').text(stats)
+// }
+
 module.exports = {
   playNewGame,
   onCreateNewGame,
   onUpdateGame
+  // showStats
 }
