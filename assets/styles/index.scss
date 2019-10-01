@@ -3,19 +3,37 @@
 body {
   padding: 20px;
   margin: 20px;
+  text-align: center;
 }
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  text-align: left;
+}
+
+.message {
+  text-align: center;
+}
+
+.game-message {
+  text-align: center;
+}
+
 .success {
   color: green;
+  font-size: 20px;
 }
 
 .failure {
   color: red;
+  font-size: 20px;
 }
-
 .game-board {
   height: 70vmin;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin: auto;
   width: 70vmin;
 
 }
@@ -30,7 +48,8 @@ body {
   justify-content: center;
 }
 
-// from CSS lesson
+// from CSS lesson. Would like to implement `nth-child`
+// TO DO for resubmission
 // .game-board {
 //   height: 70vmin;
 //   margin: auto;
@@ -70,4 +89,8 @@ body {
 
 .left {
   border-left: 0;
+}
+
+.new-game {
+  margin: 10px;
 }

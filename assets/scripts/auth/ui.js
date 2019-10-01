@@ -9,8 +9,8 @@ const successMessage = function (newText) {
 }
 const failureMessage = function (newText) {
   $('#message').text(newText)
-  $('#message').removeClass('failure')
-  $('#message').addClass('success')
+  $('#message').removeClass('success')
+  $('#message').addClass('failure')
 }
 
 const onSignUpSuccess = function () {
