@@ -22,6 +22,8 @@ const onSignIn = function (event) {
   api.signIn(formData)
     .then(ui.onSignInSuccess)
     .catch(ui.onSignInFailure)
+  // Clear form
+  // $('#sign-in').reset()
 }
 
 const onChangePassword = function (event) {

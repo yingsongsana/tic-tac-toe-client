@@ -16,13 +16,13 @@ const altMessage = function (newText) {
 
 const onCreateNewGameSuccess = function (data) {
   store.game = data.game
-  console.log(data.game)
+  // console.log(data.game)
   // message('New game has been create!')
 }
 
 const onUpdateGameSuccess = function (data) {
   store.game = data.game
-  console.log(data)
+  // console.log(data)
 }
 
 const onCreateNewGameFailure = function () {
@@ -31,7 +31,7 @@ const onCreateNewGameFailure = function () {
 
 const onGetGamesSuccess = function (data) {
   store.game = data.game
-  console.log(data)
+  // console.log(data)
   // message('Games won ', store.game.)
 }
 

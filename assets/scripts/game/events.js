@@ -112,7 +112,7 @@ const add = function (event) {
     // changes play from x to o and vice versa
     swapPlay()
     checkForWin()
-    console.log('This is ', over)
+    // console.log('This is ', over)
     onUpdateGame(clickId, saveCurrentPlayer, over)
   } else {
     // square already has X or O
