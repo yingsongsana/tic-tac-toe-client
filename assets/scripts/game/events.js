@@ -28,10 +28,10 @@ const onUpdateGame = function (index, move, over) {
     .then(ui.onUpdateGameSuccess)
 }
 // unable to translate this into
-// const onGetGames = function () {
-//   api.index()
-//     .then(ui.onGetGamesSuccess)
-// }
+const onGetGames = function (event) {
+  api.index(event)
+    .then(ui.onGetGamesSuccess)
+}
 
 // swap player
 const swapPlay = function () {
@@ -139,6 +139,7 @@ const playNewGame = function () {
 module.exports = {
   playNewGame,
   onCreateNewGame,
-  onUpdateGame
+  onUpdateGame,
+  onGetGames
   // showStats
 }

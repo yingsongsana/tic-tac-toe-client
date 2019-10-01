@@ -33,7 +33,7 @@ const update = function (index, move, over) {
   })
 }
 
-const index = function () {
+const index = function (event) {
   return $.ajax({
     url: config.apiUrl + '/games/',
     method: 'GET',
