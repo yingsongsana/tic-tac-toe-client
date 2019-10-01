@@ -1,23 +1,96 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  text-align: left;
+}
+
+.message {
+  text-align: center;
+}
+
+.game-message {
+  text-align: center;
+}
 
 .success {
   color: green;
+  font-size: 20px;
 }
 
 .failure {
   color: red;
+  font-size: 20px;
 }
-
 .game-board {
-  position: absolute;
-  margin-left: 20%;
-  margin-right: 20%;
+  height: 70vmin;
+  margin: auto;
+  width: 70vmin;
+
 }
 
 .box {
   align-items: center;
   background-color: none;
   border: 1px solid black;
-  height: 100px;
+  display: flex;
+  font-size: 15vmin;
+  height: calc(100% / 3);
+  justify-content: center;
+}
+
+// from CSS lesson. Would like to implement `nth-child`
+// TO DO for resubmission
+// .game-board {
+//   height: 70vmin;
+//   margin: auto;
+//   width: 70vmin;
+//
+//   .box {
+//     align-items: center;
+//     border-right:  2px solid;
+//     border-top: 2px solid;
+//     cursor: pointer;
+//     display: flex;
+//     font-size: 15vmin;
+//     height: calc(100% / 3);
+//     justify-content: center;
+//
+//     .box:nth-child(3n) {
+//       border-right: 0;
+//     }
+//
+//     .box:nth-child(-n +3) {
+//       border-top: 0;
+//     }
+//   }
+// }
+
+.top {
+  border-top: 0;
+}
+
+.right {
+  border-right: 0;
+}
+
+.bottom {
+  border-bottom: 0;
+}
+
+.left {
+  border-left: 0;
+}
+
+.new-game {
+  margin: 10px;
 }
