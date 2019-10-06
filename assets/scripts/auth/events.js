@@ -12,6 +12,7 @@ const onSignUp = function (event) {
   api.signUp(formData)
     .then(ui.onSignUpSuccess)
     .catch(ui.onSignUpFailure)
+  onSignIn()
   $(event.target).trigger('reset')
 }
 
@@ -24,11 +25,10 @@ const onSignIn = function (event) {
     .then(ui.onSignInSuccess)
     .catch(ui.onSignInFailure)
   $(event.target).trigger('reset')
+  $('.game').removeClass('hidden')
   $('.new-game').removeClass('hidden')
   $('.greeting').addClass('hidden')
   $('.form').removeClass('hidden')
-  // Clear form
-  // $('#sign-in').reset()
 }
 
 const onChangePassword = function (event) {
@@ -49,6 +49,8 @@ const onSignOut = function (event) {
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
   $('.game').addClass('hidden')
+  $('.form').addClass('hidden')
+  $('.greeting').removeClass('hidden')
 }
 
 module.exports = {
