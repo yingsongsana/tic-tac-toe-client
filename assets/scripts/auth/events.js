@@ -25,6 +25,8 @@ const onSignIn = function (event) {
     .catch(ui.onSignInFailure)
   $(event.target).trigger('reset')
   $('.new-game').removeClass('hidden')
+  $('.greeting').addClass('hidden')
+  $('.form').removeClass('hidden')
   // Clear form
   // $('#sign-in').reset()
 }
