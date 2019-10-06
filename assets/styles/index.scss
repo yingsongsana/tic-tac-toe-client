@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
+.hidden {
+  visibility: hidden;
+}
+
 body {
   padding: 20px;
   margin: 20px;
@@ -31,11 +35,11 @@ h1 {
   color: red;
   font-size: 20px;
 }
+
 .game-board {
   height: 70vmin;
   margin: auto;
   width: 70vmin;
-
 }
 
 .box {
