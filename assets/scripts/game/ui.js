@@ -31,7 +31,7 @@ const onCreateNewGameFailure = function () {
 
 const onGetGamesSuccess = function (data) {
   store.game = data.game
-  console.log(data)
+  // console.log(data)
   $('.show-index').text(data.games.length)
   // console.log(data)
   // message('Games won ', store.game.)
