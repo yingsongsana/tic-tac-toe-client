@@ -11,9 +11,16 @@ let gameBoard = ['', '', '', '', '', '', '', '', '']
 let play = 'X'
 let over = false
 
+// Hide game board
+const hideBoard = function () {
+  event.preventDefault()
+  $('game-board').hide()
+}
+
 const onCreateNewGame = function (event) {
   event.preventDefault()
   // clearing the divs with any previous moves
+  // needs to show board here from hiding it $(.game-board)
   $('.box').html('')
   // resetting variables to default
   over = false
@@ -140,6 +147,7 @@ const playNewGame = function () {
 }
 
 module.exports = {
+  hideBoard,
   playNewGame,
   onCreateNewGame,
   onUpdateGame,
