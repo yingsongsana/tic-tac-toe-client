@@ -11,7 +11,6 @@ const events = require('./game/events')
 // require('./example')
 
 $(() => {
-  // $('.game-board').on('load', events.hideBoard)
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)

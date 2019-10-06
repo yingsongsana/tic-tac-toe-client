@@ -45,6 +45,7 @@ const onSignOut = function (event) {
   api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
+  $('.game').addClass('hidden')
 }
 
 module.exports = {

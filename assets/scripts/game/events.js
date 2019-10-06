@@ -16,6 +16,7 @@ const onCreateNewGame = function (event) {
   // clearing the divs with any previous moves
   // needs to show board here from hiding it $(.game-board)
   $('.game-board').removeClass('hidden')
+  $('#index').removeClass('hidden')
   $('.box').html('')
   // resetting variables to default
   over = false
