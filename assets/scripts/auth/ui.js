@@ -16,16 +16,18 @@ const failureMessage = function (newText) {
 const onSignUpSuccess = function (data) {
   successMessage('Signed up successfully!')
   store.user = data.user
+  $('#sign-up').trigger('reset')
 }
 
 const onSignUpFailure = function (event) {
   failureMessage('Signed up failed')
-  $(event.target).trigger('reset')
+  $('#sign-up').trigger('reset')
 }
 
 const onSignInSuccess = function (data) {
   successMessage('Signed in successfully!')
   store.user = data.user
+  $('#sign-in').trigger('reset')
   // console.log(store.user)
   $('.game').removeClass('hidden')
   $('.new-game').removeClass('hidden')
@@ -35,16 +37,17 @@ const onSignInSuccess = function (data) {
 
 const onSignInFailure = function (event) {
   failureMessage('Signed in failed')
-  $(event.target).trigger('reset')
+  $('#sign-in').trigger('reset')
 }
 
 const onChangePasswordSuccess = function (data) {
   successMessage('Changed password successfully!')
+  $('#change-password').trigger('reset')
 }
 
 const onChangePasswordFailure = function (event) {
   failureMessage('Changed password failed')
-  $(event.target).trigger('reset')
+  $('#change-password').trigger('reset')
 }
 
 const onSignOutSuccess = function () {
