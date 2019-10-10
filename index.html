@@ -21,15 +21,15 @@
 
             <h2 class="text-muted h4">Change Password</h2>
             <form id="change-password">
-              <input type="password" name="passwords[old]" placeholder="Enter old password">
-              <input type="password" name="passwords[new]" placeholder="Enter new password">
-              <button class="btn-secondary">Change Password</button>
+              <input class="form-control form-control-sm col-md-4 md-3" type="password" name="passwords[old]" placeholder="Enter old password">
+              <input class="form-control form-control-sm" type="password" name="passwords[new]" placeholder="Enter new password">
+              <button class="btn btn-secondary">Change Password</button>
             </form>
       <br>
 
             <h2 class="text-muted h4">Sign Out</h2>
             <form id="sign-out">
-              <button class="btn-secondary">Sign Out</button>
+              <button class="btn btn-secondary">Sign Out</button>
             </form>
       <br>
     </div>
@@ -45,25 +45,25 @@
   <div class="sign-up">
     <h2 class="text-muted h4">Sign Up</h2>
     <form id="sign-up">
-      <input type="email" name="credentials[email]" placeholder="Enter email">
-      <input type="password" name="credentials[password]" placeholder="Enter password">
-      <input type="password" name="credentials[password_confirmation]" placeholder="Enter password">
-      <button class="btn-secondary">Sign Up</<button></button>
+      <input class="form-control form-control-sm" type="email" name="credentials[email]" placeholder="Enter email">
+      <input class="form-control form-control-sm" type="password" name="credentials[password]" placeholder="Enter password">
+      <input class="form-control form-control-sm" type="password" name="credentials[password_confirmation]" placeholder="Enter password">
+      <button class="btn btn-secondary">Sign Up</<button></button>
     </form>
   </div>
 
   <div class="sign-in">
     <h2 class="text-muted h4">Sign In</h2>
     <form id="sign-in">
-      <input type="email" name="credentials[email]" placeholder="Enter email">
-      <input type="password" name="credentials[password]" placeholder="Enter password">
-      <button class="btn-secondary">Sign In</button>
+      <input class="form-control form-control-sm" type="email" name="credentials[email]" placeholder="Enter email">
+      <input class="form-control form-control-sm" type="password" name="credentials[password]" placeholder="Enter password">
+      <button class="btn btn-secondary">Sign In</button>
     </form>
     </div>
 </div>
 
     <div class="game">
-      <button class="new-game btn-dark h4 hidden" id="new-game">New Game</button>
+      <button class="new-game btn btn-dark h4 hidden" id="new-game">New Game</button>
       <h2 class="game-message" id="game-message"></h2>
       <br>
 
@@ -80,10 +80,8 @@
       </div>
       <br>
 
-      <!-- <button class="new-game btn-dark h4 hidden" id="new-game">New Game</button> -->
-
       <div>
-        <button class="hidden" id="index">Games</button>
+        <button class="btn btn-dark hidden" id="index">Games</button>
         <div class="show-index">
           </div>
       </div>

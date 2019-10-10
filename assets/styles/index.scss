@@ -1,29 +1,97 @@
 @import '~bootstrap/scss/bootstrap';
 
-.hidden {
-  visibility: hidden;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+// /* Mobile Styles */
+// @media only screen and (max-width: 400px) {
+//   body {
+//     background-color: #F09A9D; /* Red */
+//   }
+//
+//   .sign-up {
+//     background-color: #F6F7F8;
+//     border: 1px solid #D6D9DC;
+//     border-radius: 3px;
+//     margin: 40px 0;
+//     padding: 50px;
+//     width: 80%;
+//   }
+//
+//   .sign-in {
+//     background-color: #F6F7F8;
+//     border: 1px solid #D6D9DC;
+//     border-radius: 3px;
+//     margin: 40px 0;
+//     padding: 50px;
+//     width: 80%;
+//   }
+// }
 
 body {
   padding: 20px;
   margin: 20px;
   text-align: center;
+  .hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 h1 {
   text-align: center;
 }
 
+.greeting {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  // input {
+  //   margin: 5px;
+  // }
+}
+
 .sign-up {
-  border: 1px solid black;
+  // border: 1px solid black;
+  // height: 200px;
+  // padding: 20px;
+  // width: 400px;text-align: center;
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 50px;
+  width: 80%;
 }
 
 .sign-in {
-  border: 1px solid black;
+  // border: 1px solid black;
+  // height: 50%;
+  // padding: 10%;
+  // width: 50%;
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  margin: 20px 0;
+  padding: 50px;
+  width: 80%;
 }
 
-.form {
-  text-align: left;
+// .form {
+//   //text-align: left;
+//   input {
+//     display: inline-block;
+//     width: 250px;
+//   }
+// }
+
+input {
+  margin: 5px;
 }
 
 .message {
@@ -38,7 +106,6 @@ h1 {
   color: red;
 }
 
-
 .success {
   color: green;
   font-size: 20px;
@@ -47,6 +114,10 @@ h1 {
 .failure {
   color: red;
   font-size: 20px;
+}
+
+.new-game {
+  margin: 10px;
 }
 
 .game-board {
@@ -64,7 +135,6 @@ h1 {
   height: calc(100% / 3);
   justify-content: center;
 }
-
 // from CSS lesson. Would like to implement `nth-child`
 // TO DO for resubmission
 // .game-board {
@@ -107,7 +177,36 @@ h1 {
 .left {
   border-left: 0;
 }
-
 // .new-game {
 //   margin: 5px;
 // }
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #F5CF8E; /* Yellow */
+  }
+
+  .sign-up {
+    width: 350px;
+  }
+
+  .sign-in {
+    width: 350px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #B2D6FF; /* Blue */
+  }
+
+  .sign-up {
+    width: 350px;
+  }
+
+  .sign-in {
+    width: 350px;
+  }
+}
