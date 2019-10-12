@@ -1,7 +1,6 @@
 'use strict'
 
 const ui = require('./ui.js')
-// const gameEvents = require('./game/events.js')
 const store = require('./../store.js')
 const gameUi = require('./ui.js')
 const api = require('./api.js')
@@ -104,16 +103,6 @@ const checkForWin = function () {
     over = false
   }
 }
-// Trying to find a tie condition once board is full
-// const checkFull = function () {
-//   for (let i = 0; i < gameBoard.length; i++) {
-//     if () {
-//
-//     } else {
-//
-//     }
-//   }
-// }
 
 const add = function (event) {
   const click = event.target
@@ -147,5 +136,4 @@ module.exports = {
   onCreateNewGame,
   onUpdateGame,
   onGetGames
-  // showStats
 }

@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
-$primary-color: #e9ecef;
+$theme-color: #E0E0E0;
+$primary-color: #F3F3F3;
 
 * {
   box-sizing: border-box;
@@ -7,35 +8,8 @@ $primary-color: #e9ecef;
   padding: 0;
 }
 
-// /* Mobile Styles */
-// @media only screen and (max-width: 400px) {
-//   body {
-//     background-color: #F09A9D; /* Red */
-//   }
-//
-//   .sign-up {
-//     background-color: #F6F7F8;
-//     border: 1px solid #D6D9DC;
-//     border-radius: 3px;
-//     margin: 40px 0;
-//     padding: 50px;
-//     width: 80%;
-//   }
-//
-//   .sign-in {
-//     background-color: #F6F7F8;
-//     border: 1px solid #D6D9DC;
-//     border-radius: 3px;
-//     margin: 40px 0;
-//     padding: 50px;
-//     width: 80%;
-//   }
-// }
-
 body {
   background-color: $primary-color;
-  // padding: 20px;
-  // margin: 20px;
   text-align: center;
   .hidden {
     display: none;
@@ -44,6 +18,7 @@ body {
 }
 
 h1 {
+  color: #343a40;
   margin-top: 80px;
   text-align: center;
 }
@@ -53,45 +28,28 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: auto;
-  // input {
-  //   margin: 5px;
-  // }
 }
 
 .sign-up {
-  // border: 1px solid black;
-  // height: 200px;
-  // padding: 20px;
-  // width: 400px;text-align: center;
-  background-color: #F6F7F8;
-  border: 1px solid #D6D9DC;
+  background-color: $theme-color;
+  border: 1px solid $theme-color;
   border-radius: 3px;
   display: inline-block;
-  margin: 20px 0;
-  padding: 50px;
-  width: 350px;
+  height: 240px;
+  // margin: 20px 0;
+  padding: 30px;
+  width: 300px;
 }
 
 .sign-in {
-  // border: 1px solid black;
-  // height: 50%;
-  // padding: 10%;
-  // width: 50%;
-  background-color: #F6F7F8;
-  border: 1px solid #D6D9DC;
+  background-color: $theme-color;
+  border: 1px solid $theme-color;
   border-radius: 3px;
+  height: 220px;
   margin: 20px 0;
-  padding: 50px;
-  width: 350px;
+  padding: 30px;
+  width: 300px;
 }
-
-// .form {
-//   //text-align: left;
-//   input {
-//     display: inline-block;
-//     width: 250px;
-//   }
-// }
 
 input {
   margin: 5px;
@@ -105,17 +63,13 @@ input {
   text-align: center;
 }
 
-.alt-message {
-  color: red;
-}
-
 .success {
-  color: green;
+  color: #009944;
   font-size: 20px;
 }
 
 .failure {
-  color: red;
+  color: #cf000f;
   font-size: 20px;
 }
 
@@ -124,87 +78,26 @@ input {
 }
 
 .game-board {
-  height: 70vmin;
+  height: 50vmin;
   margin: auto;
-  width: 70vmin;
+  width: 50vmin;
+
+  .box {
+    align-items: center;
+    border-right:  2px solid;
+    border-top: 2px solid;
+    cursor: pointer;
+    display: flex;
+    font-size: 15vmin;
+    height: calc(100% / 3);
+    justify-content: center;
+
+    &:nth-child(3n) {
+      border-right: 0;
+    }
+
+    &:nth-child(-n + 3) {
+      border-top: 0;
+    }
+  }
 }
-
-.box {
-  align-items: center;
-  background-color: none;
-  border: 1px solid black;
-  display: flex;
-  font-size: 15vmin;
-  height: calc(100% / 3);
-  justify-content: center;
-}
-// from CSS lesson. Would like to implement `nth-child`
-// TO DO for resubmission
-// .game-board {
-//   height: 70vmin;
-//   margin: auto;
-//   width: 70vmin;
-//
-//   .box {
-//     align-items: center;
-//     border-right:  2px solid;
-//     border-top: 2px solid;
-//     cursor: pointer;
-//     display: flex;
-//     font-size: 15vmin;
-//     height: calc(100% / 3);
-//     justify-content: center;
-//
-//     .box:nth-child(3n) {
-//       border-right: 0;
-//     }
-//
-//     .box:nth-child(-n +3) {
-//       border-top: 0;
-//     }
-//   }
-// }
-
-.top {
-  border-top: 0;
-}
-
-.right {
-  border-right: 0;
-}
-
-.bottom {
-  border-bottom: 0;
-}
-
-.left {
-  border-left: 0;
-}
-
-// .new-game {
-//   margin: 5px;
-// }
-
-// /* Tablet Styles */
-// @media only screen and (min-width: 401px) and (max-width: 960px) {
-//
-//   .sign-up {
-//     width: 350px;
-//   }
-//
-//   .sign-in {
-//     width: 350px;
-//   }
-// }
-//
-// /* Desktop Styles */
-// @media only screen and (min-width: 961px) {
-//
-//   .sign-up {
-//     width: 350px;
-//   }
-//
-//   .sign-in {
-//     width: 350px;
-//   }
-// }
