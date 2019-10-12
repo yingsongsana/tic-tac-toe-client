@@ -12,34 +12,37 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Tic Tac Toe</h1>
-      <h2 class="message" id="message"></h2>
+      <!-- <h1>Tic Tac Toe</h1>
+      <h2 class="message" id="message"></h2> -->
 
       <div class="pos-f-t form hidden">
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4 ">
 
             <h2 class="text-muted h4">Change Password</h2>
-            <form id="change-password">
-              <input class="form-control form-control-sm col-md-4 md-3" type="password" name="passwords[old]" placeholder="Enter old password">
-              <input class="form-control form-control-sm" type="password" name="passwords[new]" placeholder="Enter new password">
+            <form class="change-password" id="change-password">
+              <input class="form-control-sm" type="password" name="passwords[old]" placeholder="Enter old password">
+              <input class="form-control-sm" type="password" name="passwords[new]" placeholder="Enter new password">
               <button class="btn btn-secondary">Change Password</button>
             </form>
       <br>
 
-            <h2 class="text-muted h4">Sign Out</h2>
+            <!-- <h2 class="text-muted h4">Sign Out</h2> -->
             <form id="sign-out">
               <button class="btn btn-secondary">Sign Out</button>
             </form>
       <br>
     </div>
   </div>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
 </div>
+
+<h1>Tic Tac Toe</h1>
+<h2 class="message" id="message"></h2>
 
 <div class="greeting">
   <div class="sign-up">

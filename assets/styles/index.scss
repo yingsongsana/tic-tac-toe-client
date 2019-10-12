@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+$primary-color: #e9ecef;
 
 * {
   box-sizing: border-box;
@@ -32,8 +33,9 @@
 // }
 
 body {
-  padding: 20px;
-  margin: 20px;
+  background-color: $primary-color;
+  // padding: 20px;
+  // margin: 20px;
   text-align: center;
   .hidden {
     display: none;
@@ -42,6 +44,7 @@ body {
 }
 
 h1 {
+  margin-top: 80px;
   text-align: center;
 }
 
@@ -66,7 +69,7 @@ h1 {
   display: inline-block;
   margin: 20px 0;
   padding: 50px;
-  width: 80%;
+  width: 350px;
 }
 
 .sign-in {
@@ -79,7 +82,7 @@ h1 {
   border-radius: 3px;
   margin: 20px 0;
   padding: 50px;
-  width: 80%;
+  width: 350px;
 }
 
 // .form {
@@ -177,36 +180,31 @@ input {
 .left {
   border-left: 0;
 }
+
 // .new-game {
 //   margin: 5px;
 // }
 
-/* Tablet Styles */
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  body {
-    background-color: #F5CF8E; /* Yellow */
-  }
-
-  .sign-up {
-    width: 350px;
-  }
-
-  .sign-in {
-    width: 350px;
-  }
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 961px) {
-  body {
-    background-color: #B2D6FF; /* Blue */
-  }
-
-  .sign-up {
-    width: 350px;
-  }
-
-  .sign-in {
-    width: 350px;
-  }
-}
+// /* Tablet Styles */
+// @media only screen and (min-width: 401px) and (max-width: 960px) {
+//
+//   .sign-up {
+//     width: 350px;
+//   }
+//
+//   .sign-in {
+//     width: 350px;
+//   }
+// }
+//
+// /* Desktop Styles */
+// @media only screen and (min-width: 961px) {
+//
+//   .sign-up {
+//     width: 350px;
+//   }
+//
+//   .sign-in {
+//     width: 350px;
+//   }
+// }

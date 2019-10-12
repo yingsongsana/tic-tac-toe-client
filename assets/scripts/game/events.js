@@ -96,7 +96,7 @@ const checkForWin = function () {
   } else if (over === false && gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') {
     gameUi.onWinningO()
     over = true
-  } else if (over === false && gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') {
+  } else if (over === false && gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O') {
     gameUi.onWinningO()
     over = true
   } else {
