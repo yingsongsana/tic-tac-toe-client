@@ -1,17 +1,58 @@
 @import '~bootstrap/scss/bootstrap';
+$theme-color: #E0E0E0;
+$primary-color: #F3F3F3;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  padding: 20px;
-  margin: 20px;
+  background-color: $primary-color;
   text-align: center;
+  .hidden {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 h1 {
+  color: #343a40;
+  margin-top: 80px;
   text-align: center;
 }
 
-.form {
-  text-align: left;
+.greeting {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.sign-up {
+  background-color: $theme-color;
+  border: 1px solid $theme-color;
+  border-radius: 3px;
+  display: inline-block;
+  height: 240px;
+  // margin: 20px 0;
+  padding: 30px;
+  width: 300px;
+}
+
+.sign-in {
+  background-color: $theme-color;
+  border: 1px solid $theme-color;
+  border-radius: 3px;
+  height: 220px;
+  margin: 20px 0;
+  padding: 30px;
+  width: 300px;
+}
+
+input {
+  margin: 5px;
 }
 
 .message {
@@ -23,74 +64,40 @@ h1 {
 }
 
 .success {
-  color: green;
+  color: #009944;
   font-size: 20px;
 }
 
 .failure {
-  color: red;
+  color: #cf000f;
   font-size: 20px;
-}
-.game-board {
-  height: 70vmin;
-  margin: auto;
-  width: 70vmin;
-
-}
-
-.box {
-  align-items: center;
-  background-color: none;
-  border: 1px solid black;
-  display: flex;
-  font-size: 15vmin;
-  height: calc(100% / 3);
-  justify-content: center;
-}
-
-// from CSS lesson. Would like to implement `nth-child`
-// TO DO for resubmission
-// .game-board {
-//   height: 70vmin;
-//   margin: auto;
-//   width: 70vmin;
-//
-//   .box {
-//     align-items: center;
-//     border-right:  2px solid;
-//     border-top: 2px solid;
-//     cursor: pointer;
-//     display: flex;
-//     font-size: 15vmin;
-//     height: calc(100% / 3);
-//     justify-content: center;
-//
-//     .box:nth-child(3n) {
-//       border-right: 0;
-//     }
-//
-//     .box:nth-child(-n +3) {
-//       border-top: 0;
-//     }
-//   }
-// }
-
-.top {
-  border-top: 0;
-}
-
-.right {
-  border-right: 0;
-}
-
-.bottom {
-  border-bottom: 0;
-}
-
-.left {
-  border-left: 0;
 }
 
 .new-game {
   margin: 10px;
+}
+
+.game-board {
+  height: 50vmin;
+  margin: auto;
+  width: 50vmin;
+
+  .box {
+    align-items: center;
+    border-right:  2px solid;
+    border-top: 2px solid;
+    cursor: pointer;
+    display: flex;
+    font-size: 15vmin;
+    height: calc(100% / 3);
+    justify-content: center;
+
+    &:nth-child(3n) {
+      border-right: 0;
+    }
+
+    &:nth-child(-n + 3) {
+      border-top: 0;
+    }
+  }
 }

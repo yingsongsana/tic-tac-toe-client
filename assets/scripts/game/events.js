@@ -1,7 +1,6 @@
 'use strict'
 
 const ui = require('./ui.js')
-// const gameEvents = require('./game/events.js')
 const store = require('./../store.js')
 const gameUi = require('./ui.js')
 const api = require('./api.js')
@@ -14,6 +13,9 @@ let over = false
 const onCreateNewGame = function (event) {
   event.preventDefault()
   // clearing the divs with any previous moves
+  // needs to show board here from hiding it $(.game-board)
+  $('.game-board').removeClass('hidden')
+  $('#index').removeClass('hidden')
   $('.box').html('')
   // resetting variables to default
   over = false
@@ -27,11 +29,11 @@ const onUpdateGame = function (index, move, over) {
   api.update(index, move, over)
     .then(ui.onUpdateGameSuccess)
 }
-// unable to translate this into
-// const onGetGames = function () {
-//   api.index()
-//     .then(ui.onGetGamesSuccess)
-// }
+
+const onGetGames = function (event) {
+  api.index(event)
+    .then(ui.onGetGamesSuccess)
+}
 
 // swap player
 const swapPlay = function () {
@@ -69,7 +71,7 @@ const checkForWin = function () {
   } else if (over === false && gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') {
     gameUi.onWinningX()
     over = true
-  } else if (over === false && gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[7] === 'X') {
+  } else if (over === false && gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X') {
     gameUi.onWinningX()
     over = true
   } else if (over === false && gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O') {
@@ -93,7 +95,7 @@ const checkForWin = function () {
   } else if (over === false && gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') {
     gameUi.onWinningO()
     over = true
-  } else if (over === false && gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[7] === 'O') {
+  } else if (over === false && gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O') {
     gameUi.onWinningO()
     over = true
   } else {
@@ -114,6 +116,7 @@ const add = function (event) {
     checkForWin()
     // console.log('This is ', over)
     onUpdateGame(clickId, saveCurrentPlayer, over)
+    // console.log(store.game)
   } else {
     // square already has X or O
     ui.invalidMoveMessage()
@@ -128,17 +131,9 @@ const playNewGame = function () {
   }
 }
 
-// const showStats = function (data) {
-//   store.data = data.game
-//   const stats = data.game
-//   onGetGames()
-//   How can I find just the number of games played?
-//   $('.show-index').text(stats)
-// }
-
 module.exports = {
   playNewGame,
   onCreateNewGame,
-  onUpdateGame
-  // showStats
+  onUpdateGame,
+  onGetGames
 }

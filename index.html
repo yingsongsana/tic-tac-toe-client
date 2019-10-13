@@ -12,76 +12,81 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Tic Tac Toe</h1>
-      <h2 class="message" id="message"></h2>
 
-      <div class="pos-f-t form">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4 ">
-      <h2 class="text-muted h4">Sign Up</h2>
-      <form id="sign-up">
-        <input type="email" name="credentials[email]" placeholder="Enter email">
-        <input type="password" name="credentials[password]" placeholder="Enter password">
-        <input type="password" name="credentials[password_confirmation]" placeholder="Enter password">
-        <button class="btn-secondary">Sign Up</button>
-      </form>
+      <div class="pos-f-t form hidden">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4 ">
+
+            <h2 class="text-muted h4">Change Password</h2>
+            <form class="change-password" id="change-password">
+              <input class="form-control-sm" type="password" name="passwords[old]" placeholder="Enter old password">
+              <input class="form-control-sm" type="password" name="passwords[new]" placeholder="Enter new password">
+              <button class="btn btn-secondary">Change Password</button>
+            </form>
       <br>
 
-      <h2 class="text-muted h4">Sign In</h2>
-      <form id="sign-in">
-        <input type="email" name="credentials[email]" placeholder="Enter email">
-        <input type="password" name="credentials[password]" placeholder="Enter password">
-        <button class="btn-secondary">Sign In</button>
-      </form>
-      <br>
-
-      <h2 class="text-muted h4">Change Password</h2>
-      <form id="change-password">
-        <input type="password" name="passwords[old]" placeholder="Enter old password">
-        <input type="password" name="passwords[new]" placeholder="Enter new password">
-        <button class="btn-secondary">Change Password</button>
-      </form>
-      <br>
-
-      <h2 class="text-muted h4">Sign Out</h2>
-      <form id="sign-out">
-        <button class="btn-secondary">Sign Out</button>
-      </form>
+            <form id="sign-out">
+              <button class="btn btn-secondary">Sign Out</button>
+            </form>
       <br>
     </div>
   </div>
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </nav>
 </div>
 
+<h1>Tic Tac Toe</h1>
+<h2 class="message" id="message"></h2>
+
+<div class="greeting">
+  <div class="sign-up">
+    <h5 class="text-muted h7">Sign Up</h5>
+    <form id="sign-up">
+      <input class="form-control form-control-sm" type="email" name="credentials[email]" placeholder="Enter email">
+      <input class="form-control form-control-sm" type="password" name="credentials[password]" placeholder="Enter password">
+      <input class="form-control form-control-sm" type="password" name="credentials[password_confirmation]" placeholder="Enter password">
+      <button class="btn btn-secondary btn-sm">Sign Up</<button></button>
+    </form>
+  </div>
+
+  <div class="sign-in">
+    <h5 class="text-muted h7">Sign In</h5>
+    <form id="sign-in">
+      <input class="form-control form-control-sm" type="email" name="credentials[email]" placeholder="Enter email">
+      <input class="form-control form-control-sm" type="password" name="credentials[password]" placeholder="Enter password">
+      <button class="btn btn-secondary btn-sm">Sign In</button>
+    </form>
+    </div>
+</div>
+
+    <div class="game">
+      <button class="new-game btn btn-dark h4 hidden" id="new-game">New Game</button>
       <h2 class="game-message" id="game-message"></h2>
-      <h2 class="game-message" id="alert-message"></h2>
       <br>
 
-      <div class="game-board row">
-        <div class="col-4 box top left" id="0"></div>
-        <div class="col-4 box top" id="1"></div>
-        <div class="col-4 box top right" id="2"></div>
-        <div class="col-4 box left" id="3"></div>
+      <div class="game-board row hidden">
+        <div class="col-4 box" id="0"></div>
+        <div class="col-4 box" id="1"></div>
+        <div class="col-4 box" id="2"></div>
+        <div class="col-4 box" id="3"></div>
         <div class="col-4 box" id="4"></div>
-        <div class="col-4 box right" id="5"></div>
-        <div class="col-4 box bottom left" id="6"></div>
-        <div class="col-4 box bottom" id="7"></div>
-        <div class="col-4 box bottom right" id="8"></div>
+        <div class="col-4 box" id="5"></div>
+        <div class="col-4 box" id="6"></div>
+        <div class="col-4 box" id="7"></div>
+        <div class="col-4 box" id="8"></div>
       </div>
       <br>
 
-      <button class="new-game btn-dark h4" id="new-game">New Game</button>
-
-      <!-- <div>
-        <button class="cell-index">Get Stats</button>
+      <div>
+        <button class="btn btn-dark hidden" id="index">Games</button>
         <div class="show-index">
           </div>
       </div>
-      <br> -->
+    </div>
+      <br>
 
     </body>
 </html>
